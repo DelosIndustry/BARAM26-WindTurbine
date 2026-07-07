@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Group 3 Calibration Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 28px; color: #222; }
+    h1, h2 { margin-bottom: 8px; }
+    table { border-collapse: collapse; margin: 12px 0 24px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: #f2f2f2; }
+    img { max-width: 100%; margin: 12px 0 28px; border: 1px solid #ddd; }
+    .note { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Group 3 Calibration Report</h1>
+  <p class="note">Validation period starts at 2024-01-01 01:00:00. Calibration form: pred = clip(pred * scale + bias, 0, 21000).</p>
+  <h2>Best Calibration</h2>
+  <table>
+    <tr><th>scale</th><th>bias</th><th>score</th><th>g3_nmae</th><th>g3_ficr</th><th>g3_within_6pct</th><th>g3_within_8pct</th></tr>
+    <tr><td>1.195000</td><td>200.000000</td><td>0.627563</td><td>0.155898</td><td>0.326101</td><td>0.266915</td><td>0.345741</td></tr>
+  </table>
+  <h2>Before vs After</h2>
+  <table>
+    <tr><th>metric</th><th>before</th><th>after</th><th>delta</th></tr>
+    <tr><td>Total score</td><td>0.622339</td><td>0.627563</td><td>0.005224</td></tr>
+    <tr><td>1-NMAE</td><td>0.873326</td><td>0.868233</td><td>-0.005093</td></tr>
+    <tr><td>FICR</td><td>0.371352</td><td>0.386894</td><td>0.015542</td></tr>
+    <tr><td>Group 3 NMAE</td><td>0.140619</td><td>0.155898</td><td>0.015279</td></tr>
+    <tr><td>Group 3 FICR</td><td>0.279476</td><td>0.326101</td><td>0.046625</td></tr>
+  </table>
+  <h2>Visuals</h2>
+  <img src="group3_calibration_heatmap.png" alt="calibration heatmap">
+  <img src="group3_scatter_before_after.png" alt="scatter before after">
+  <img src="group3_error_distribution.png" alt="error distribution">
+  <img src="group3_monthly_metrics.png" alt="monthly metrics">
+  <img src="group3_daily_timeseries.png" alt="daily timeseries">
+</body>
+</html>
