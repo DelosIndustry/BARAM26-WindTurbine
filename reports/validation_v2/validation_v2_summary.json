@@ -1,0 +1,58 @@
+{
+  "fold_years": [
+    2023,
+    2024
+  ],
+  "seeds": [
+    42,
+    2026,
+    3407
+  ],
+  "max_estimators": 1200,
+  "iteration_step": 50,
+  "use_sample_weight": true,
+  "recommended_iterations": [
+    {
+      "target": "kpx_group_1",
+      "iteration": 300,
+      "folds": 2,
+      "mean_score": 0.6042847565982585,
+      "min_score": 0.568760999409626,
+      "std_score": 0.05023817920261287,
+      "mean_one_minus_nmae": 0.8712058003690385,
+      "mean_ficr": 0.33736371282747857,
+      "validation_warning": ""
+    },
+    {
+      "target": "kpx_group_2",
+      "iteration": 350,
+      "folds": 2,
+      "mean_score": 0.644281269347494,
+      "min_score": 0.6284454984111691,
+      "std_score": 0.022395162028784367,
+      "mean_one_minus_nmae": 0.8714131472507438,
+      "mean_ficr": 0.4171493914442442,
+      "validation_warning": ""
+    },
+    {
+      "target": "kpx_group_3",
+      "iteration": 100,
+      "folds": 1,
+      "mean_score": 0.5721072246911358,
+      "min_score": 0.5721072246911358,
+      "std_score": 0.0,
+      "mean_one_minus_nmae": 0.860633891741046,
+      "mean_ficr": 0.2835805576412258,
+      "validation_warning": "single annual fold; treat as provisional"
+    }
+  ],
+  "skipped": [
+    {
+      "fold": "valid_2023",
+      "target": "kpx_group_3",
+      "train_rows": 0,
+      "official_valid_rows": 8760,
+      "reason": "no train labels"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "output_path": "submissions/lgbm_weighted_group3_monthly_submission.csv",
+  "rows": 8760,
+  "models": [
+    {
+      "target": "kpx_group_1",
+      "train_rows": 26304,
+      "features": 507,
+      "n_estimators": 581,
+      "sample_weight": true
+    },
+    {
+      "target": "kpx_group_2",
+      "train_rows": 26304,
+      "features": 507,
+      "n_estimators": 632,
+      "sample_weight": true
+    },
+    {
+      "target": "kpx_group_3",
+      "train_rows": 17540,
+      "features": 507,
+      "n_estimators": 210,
+      "sample_weight": true
+    }
+  ],
+  "group3_monthly_calibration": true,
+  "monthly_calibration_path": "reports/group3_monthly_calibration/group3_monthly_calibration_params.csv",
+  "prediction_summary": {
+    "kpx_group_1": {
+      "min": 0.0,
+      "mean": 7966.516836740657,
+      "max": 21600.0
+    },
+    "kpx_group_2": {
+      "min": 0.0,
+      "mean": 8189.218769848157,
+      "max": 20779.231156042213
+    },
+    "kpx_group_3": {
+      "min": 0.0,
+      "mean": 8516.52074417717,
+      "max": 21000.0
+    }
+  }
+}

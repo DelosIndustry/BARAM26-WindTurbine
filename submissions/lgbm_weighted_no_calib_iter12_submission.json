@@ -1,0 +1,54 @@
+{
+  "output_path": "submissions/lgbm_weighted_no_calib_iter12_submission.csv",
+  "rows": 8760,
+  "models": [
+    {
+      "target": "kpx_group_1",
+      "train_rows": 26304,
+      "features": 507,
+      "n_estimators": 697,
+      "sample_weight": true,
+      "device_type": "cpu",
+      "gpu_device_id": 0
+    },
+    {
+      "target": "kpx_group_2",
+      "train_rows": 26304,
+      "features": 507,
+      "n_estimators": 758,
+      "sample_weight": true,
+      "device_type": "cpu",
+      "gpu_device_id": 0
+    },
+    {
+      "target": "kpx_group_3",
+      "train_rows": 17540,
+      "features": 507,
+      "n_estimators": 252,
+      "sample_weight": true,
+      "device_type": "cpu",
+      "gpu_device_id": 0
+    }
+  ],
+  "group3_monthly_calibration": false,
+  "monthly_calibration_path": null,
+  "device_type": "cpu",
+  "gpu_device_id": 0,
+  "prediction_summary": {
+    "kpx_group_1": {
+      "min": 0.0,
+      "mean": 7957.17161485828,
+      "max": 21600.0
+    },
+    "kpx_group_2": {
+      "min": 0.0,
+      "mean": 8175.72655239921,
+      "max": 20830.234232474908
+    },
+    "kpx_group_3": {
+      "min": 0.0,
+      "mean": 6877.981619467238,
+      "max": 20843.391306193567
+    }
+  }
+}

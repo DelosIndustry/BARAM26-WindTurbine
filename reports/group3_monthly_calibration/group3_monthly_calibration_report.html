@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Group 3 Monthly Calibration</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 28px; color: #222; }
+    table { border-collapse: collapse; margin: 12px 0 24px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: #f2f2f2; }
+    img { max-width: 100%; margin: 12px 0 28px; border: 1px solid #ddd; }
+    .warn { color: #8a5a00; }
+  </style>
+</head>
+<body>
+  <h1>Group 3 Monthly Calibration</h1>
+  <p class="warn">Monthly calibration can overfit validation months. Treat this as a diagnostic and use conservative checks before final submission.</p>
+  <h2>Before vs After</h2>
+  <table>
+    <tr><th>metric</th><th>before</th><th>after</th><th>delta</th></tr>
+    <tr><td>Total score</td><td>0.622339</td><td>0.641937</td><td>0.019598</td></tr>
+    <tr><td>1-NMAE</td><td>0.873326</td><td>0.871711</td><td>-0.001615</td></tr>
+    <tr><td>FICR</td><td>0.371352</td><td>0.412162</td><td>0.040810</td></tr>
+    <tr><td>Group 3 NMAE</td><td>0.140619</td><td>0.145464</td><td>0.004845</td></tr>
+    <tr><td>Group 3 FICR</td><td>0.279476</td><td>0.401907</td><td>0.122431</td></tr>
+  </table>
+  <h2>Monthly Parameters</h2>
+  <table><tr><th>month</th><th>scale</th><th>bias</th></tr><tr><td>1</td><td>1.420</td><td>-1900.0</td></tr>
+<tr><td>2</td><td>1.260</td><td>-100.0</td></tr>
+<tr><td>3</td><td>1.140</td><td>900.0</td></tr>
+<tr><td>4</td><td>1.320</td><td>-500.0</td></tr>
+<tr><td>5</td><td>1.420</td><td>-1800.0</td></tr>
+<tr><td>6</td><td>0.800</td><td>1200.0</td></tr>
+<tr><td>7</td><td>1.170</td><td>1200.0</td></tr>
+<tr><td>8</td><td>0.880</td><td>2000.0</td></tr>
+<tr><td>9</td><td>0.900</td><td>1700.0</td></tr>
+<tr><td>10</td><td>1.170</td><td>1100.0</td></tr>
+<tr><td>11</td><td>1.270</td><td>2000.0</td></tr>
+<tr><td>12</td><td>0.840</td><td>1900.0</td></tr></table>
+  <h2>Visuals</h2>
+  <img src="group3_monthly_params.png" alt="monthly parameters">
+  <img src="group3_monthly_metrics.png" alt="monthly metrics">
+  <img src="group3_monthly_scatter.png" alt="scatter">
+  <img src="group3_monthly_daily_timeseries.png" alt="daily timeseries">
+</body>
+</html>

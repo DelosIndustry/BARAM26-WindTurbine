@@ -1,0 +1,18 @@
+{
+  "input": "submissions/lgbm_weighted_no_calibration_submission.csv",
+  "output": "submissions/lgbm_weighted_group3_global_conservative_submission.csv",
+  "target": "kpx_group_3",
+  "scale": 1.1,
+  "bias": 300.0,
+  "capacity": 21000.0,
+  "before": {
+    "min": 0.0,
+    "mean": 6885.417929813976,
+    "max": 20667.739450780897
+  },
+  "after": {
+    "min": 300.0,
+    "mean": 7868.089544160798,
+    "max": 21000.0
+  }
+}

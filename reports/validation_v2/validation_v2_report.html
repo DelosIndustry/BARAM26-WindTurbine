@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BARAM validation v2</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 28px; color: #202124; background: #ffffff; }
+h1, h2 { margin: 24px 0 10px; }
+p { line-height: 1.55; }
+.note { border-left: 4px solid #D55E00; padding: 10px 14px; background: #fff7f0; }
+.data-table { border-collapse: collapse; width: 100%; margin: 12px 0 24px; font-size: 14px; }
+.data-table th, .data-table td { border-bottom: 1px solid #dadce0; padding: 8px; text-align: right; }
+.data-table th:first-child, .data-table td:first-child { text-align: left; }
+img { width: 100%; max-width: 1500px; height: auto; margin: 10px 0 28px; }
+</style>
+</head>
+<body>
+<h1>BARAM validation v2</h1>
+<p>Seeds: [42, 2026, 3407] | Max trees: 1200 | Step: 50 | Weighted: True</p>
+<p class="note">Recommendations maximize the mean exact competition score across available annual folds. Group 3 normally has only the 2024 annual fold because 2022 labels are unavailable.</p>
+<h2>Recommended iterations</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>iteration</th>
+      <th>folds</th>
+      <th>mean_score</th>
+      <th>min_score</th>
+      <th>std_score</th>
+      <th>mean_one_minus_nmae</th>
+      <th>mean_ficr</th>
+      <th>validation_warning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kpx_group_1</td>
+      <td>300</td>
+      <td>2</td>
+      <td>0.604285</td>
+      <td>0.568761</td>
+      <td>0.050238</td>
+      <td>0.871206</td>
+      <td>0.337364</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>kpx_group_2</td>
+      <td>350</td>
+      <td>2</td>
+      <td>0.644281</td>
+      <td>0.628445</td>
+      <td>0.022395</td>
+      <td>0.871413</td>
+      <td>0.417149</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>kpx_group_3</td>
+      <td>100</td>
+      <td>1</td>
+      <td>0.572107</td>
+      <td>0.572107</td>
+      <td>0.000000</td>
+      <td>0.860634</td>
+      <td>0.283581</td>
+      <td>single annual fold; treat as provisional</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Best iteration by fold</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fold</th>
+      <th>target</th>
+      <th>scope</th>
+      <th>iteration</th>
+      <th>train_rows</th>
+      <th>valid_rows</th>
+      <th>score</th>
+      <th>one_minus_nmae</th>
+      <th>ficr</th>
+      <th>nmae</th>
+      <th>within_6pct</th>
+      <th>within_8pct</th>
+      <th>evaluated_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>valid_2023</td>
+      <td>kpx_group_1</td>
+      <td>ensemble</td>
+      <td>300</td>
+      <td>8760</td>
+      <td>8757</td>
+      <td>0.568761</td>
+      <td>0.859494</td>
+      <td>0.278028</td>
+      <td>0.140506</td>
+      <td>0.269789</td>
+      <td>0.356572</td>
+      <td>5508</td>
+    </tr>
+    <tr>
+      <td>valid_2023</td>
+      <td>kpx_group_2</td>
+      <td>ensemble</td>
+      <td>300</td>
+      <td>8760</td>
+      <td>8758</td>
+      <td>0.628871</td>
+      <td>0.864594</td>
+      <td>0.393149</td>
+      <td>0.135406</td>
+      <td>0.311712</td>
+      <td>0.399963</td>
+      <td>5473</td>
+    </tr>
+    <tr>
+      <td>valid_2024</td>
+      <td>kpx_group_1</td>
+      <td>ensemble</td>
+      <td>300</td>
+      <td>17520</td>
+      <td>8778</td>
+      <td>0.639809</td>
+      <td>0.882917</td>
+      <td>0.396700</td>
+      <td>0.117083</td>
+      <td>0.332465</td>
+      <td>0.435671</td>
+      <td>4990</td>
+    </tr>
+    <tr>
+      <td>valid_2024</td>
+      <td>kpx_group_2</td>
+      <td>ensemble</td>
+      <td>350</td>
+      <td>17520</td>
+      <td>8778</td>
+      <td>0.660117</td>
+      <td>0.878196</td>
+      <td>0.442038</td>
+      <td>0.121804</td>
+      <td>0.346996</td>
+      <td>0.446253</td>
+      <td>4977</td>
+    </tr>
+    <tr>
+      <td>valid_2024</td>
+      <td>kpx_group_3</td>
+      <td>ensemble</td>
+      <td>100</td>
+      <td>8760</td>
+      <td>8778</td>
+      <td>0.572107</td>
+      <td>0.860634</td>
+      <td>0.283581</td>
+      <td>0.139366</td>
+      <td>0.282461</td>
+      <td>0.372455</td>
+      <td>4567</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Skipped fold-target pairs</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fold</th>
+      <th>target</th>
+      <th>train_rows</th>
+      <th>official_valid_rows</th>
+      <th>reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>valid_2023</td>
+      <td>kpx_group_3</td>
+      <td>0</td>
+      <td>8760</td>
+      <td>no train labels</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Metric curves</h2>
+<img src="validation_v2_metric_curves.png" alt="metric curves">
+<h2>Seed comparison</h2>
+<img src="validation_v2_seed_comparison.png" alt="seed comparison">
+</body>
+</html>
